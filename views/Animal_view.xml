@@ -1,0 +1,53 @@
+<odoo>
+    <!-- La vista -->
+    <record id="zoologico.view_animal_tree" model="ir.ui.view">
+        <!--Le pone como una descripcion a la vista-->
+        <field name="name">animal.tree</field>
+        <!-- Define el modelo del que vendra la vista -->
+        <field name="model">zoologico.animal</field>
+        <!-- Lo que mostrara la vista -->
+        <field name="arch" type="xml">
+            <!-- El tipo de vista -->
+            <tree>
+                <!-- Las fields del modelo -->
+                <field name="nombre"/>
+                <field name="genero"/>
+                <field name="informacion_extra"/>
+                <field name="fecha_nacimiento"/>
+                <field name="especie"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- El form de animales -->
+    <record id="zoologico.view_animal_form" model="ir.ui.view">
+        <field name="name">zoologico.animal.form</field>
+        <field name="model">zoologico.animal</field>
+        <field name="arch" type="xml">
+            <form string="Gestion de animales">
+                <sheet>
+                    <group>
+                        <field name="nombre" string="Titulo"/>
+                        <field name="genero"/>
+                        <field name="informacion_extra"/>
+                        <field name="fecha_nacimiento"/>
+                        <field name="especie"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Define la vista que se usara para el modelo -->
+    <record id="action_animal" model="ir.actions.act_window">
+        <field name="name">Animal</field>
+        <field name="res_model">zoologico.animal</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- El menu del zoologico -->
+    <menuitem id="menu_zoologico" name="zoologico"/>
+
+    <!-- Submenu -->
+    <menuitem id="menu_animal" name="Animal" parent="menu_zoologico" action="action_animal"/>
+</odoo>

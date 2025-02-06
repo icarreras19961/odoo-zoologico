@@ -1,0 +1,19 @@
+<odoo>
+    <!-- Categoria personalizada para la biblioteca -->
+   <record id="module_category_zoologico" model="ir.module.category">
+        <field name="name">zoologico</field>
+        <field name="sequence">10</field>
+    </record>
+    
+    <!-- Grupo de jefes -->
+    <record id="group_zoologico_manager" model="res.groups">
+        <field name="name">Jefe del zoologico</field>
+        <field name="category_id" ref="zoologico.module_category_zoologico"/>
+    </record>
+
+    <!-- Grupo de Trabajadores -->
+    <record id="group_zoologico_worker" model="res.groups">
+        <field name="name">Trabajador del zoologico</field>
+        <field name="category_id" ref="zoologico.module_category_zoologico"/>
+    </record>
+</odoo>

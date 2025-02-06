@@ -1,0 +1,25 @@
+<odoo>
+    <record id="zoologico.view_especie_tree" model="ir.ui.view">
+        <field name="name">especie.tree</field>
+        <field name="model">zoologico.especie</field>
+
+        <field name="arch" type="xml">
+            <tree>
+                <field name="nombre"/>
+                <field name="informacion_extra"/>
+                <field name="clase"/>
+                <field name="animales_asociados"/>
+                <field name="recinto"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_especie" model="ir.actions.act_window">
+        <field name="name">Especie</field>
+        <field name="res_model">zoologico.especie</field>
+        <field name="view_mode">tree</field>
+    </record>
+
+    <menuitem id="menu_zoologico" name="zoologico"/>
+    <menuitem id="menu_especie" name="Especie" parent="menu_zoologico" action="action_especie"/>
+</odoo>

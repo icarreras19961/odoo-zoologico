@@ -1,0 +1,27 @@
+<odoo>
+    <record id="zoologico.view_recinto_tree" model="ir.ui.view">
+        <field name="name">recinto.tree</field>
+        <field name="model">zoologico.recinto</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="nombre"/>
+                <field name="informacion_extra"/>
+                <field name="trabajador"/>
+                <field name="especies"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Define la vista que se usara para el modelo -->
+    <record id="action_recinto" model="ir.actions.act_window">
+        <field name="name">Recinto</field>
+        <field name="res_model">zoologico.recinto</field>
+        <field name="view_mode">tree</field>
+    </record>
+
+    <!-- El menu del zoologico -->
+    <menuitem id="menu_zoologico" name="zoologico"/>
+
+    <!-- Submenu -->
+    <menuitem id="menu_recinto" name="Recinto" parent="menu_zoologico" action="action_recinto"/>
+</odoo>

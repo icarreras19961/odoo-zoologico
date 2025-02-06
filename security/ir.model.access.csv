@@ -1,2 +1,8 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_zoologico_zoologico,zoologico.zoologico,model_zoologico_zoologico,base.group_user,1,1,1,1
+group_zoologico_manager_animal,jefe del zoologico,model_zoologico_animal,zoologico.group_zoologico_manager,1,1,1,1
+group_zoologico_worker_animal,trabajador del zoologico,model_zoologico_animal,zoologico.group_zoologico_worker,1,0,0,0
+group_zoologico_manager_especie,jefe del zoologico,model_zoologico_especie,zoologico.group_zoologico_manager,1,1,1,1
+group_zoologico_manager_recinto,jefe del zoologico,model_zoologico_recinto,zoologico.group_zoologico_manager,1,1,1,1
+group_zoologico_manager_trabajador,jefe del zoologico,model_zoologico_trabajador,zoologico.group_zoologico_manager,1,1,1,1
+group_zoologico_manager_resena,jefe del zoologico,model_zoologico_resena,zoologico.group_zoologico_manager,1,1,1,1
+group_zoologico_manager_inventario,jefe del zoologico,model_zoologico_inventario,zoologico.group_zoologico_manager,1,1,1,1

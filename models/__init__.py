@@ -1,4 +1,3 @@
 # -*- coding: utf-8 -*-
 
-from . import models
-from . import animal, especie, recinto, trabajador, resena, evento, inventario
+from . import models,Animal,Especie,Recinto,Trabajador,Resena,inventario

@@ -1,0 +1,32 @@
+<odoo>
+    <!-- La vista -->
+    <record id="zoologico.view_inventario_tree" model="ir.ui.view">
+        <!--Le pone como una descripcion a la vista-->
+        <field name="name">inventario.tree</field>
+        <!-- Define el modelo del que vendra la vista -->
+        <field name="model">zoologico.inventario</field>
+        <!-- Lo que mostrara la vista -->
+        <field name="arch" type="xml">
+            <!-- El tipo de vista -->
+            <tree>
+                <!-- Las fields del modelo -->
+                <field name="item"/>
+                <field name="stock"/>
+            </tree>
+        </field>
+    </record>
+
+
+    <!-- Define la vista que se usara para el modelo -->
+    <record id="action_inventario" model="ir.actions.act_window">
+        <field name="name">Inventario</field>
+        <field name="res_model">zoologico.inventario</field>
+        <field name="view_mode">tree</field>
+    </record>
+
+    <!-- El menu del zoologico -->
+    <menuitem id="menu_zoologico" name="zoologico"/>
+
+    <!-- Submenu -->
+    <menuitem id="menu_inventario" name="Inventario" parent="menu_zoologico" action="action_inventario"/>
+</odoo>
