@@ -3,15 +3,14 @@
     'name': "zoologico",
 
     'summary': """
-        Short (1 phrase/line) summary of the module's purpose, used as
-        subtitle on modules listing or apps.openerp.com""",
+        Modulo para el manejo de un zoologico""",
 
     'description': """
         Un modulo sobre un zoologico
     """,
     'installable':True,
-    'author': "Ivan Carreras",
-    'website': "http://www.yourcompany.com",
+    'author': "Daniel Ibarra, Ivan Carreras",
+    'website': "https://github.com/dibarra19976/odoo-zoologico",
 
     # Categories can be used to filter modules in modules listing
     # Check https://github.com/odoo/odoo/blob/13.0/odoo/addons/base/data/ir_module_category_data.xml

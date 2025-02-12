@@ -38,11 +38,33 @@
         </field>
     </record>
 
+    <record id="zoologico.view_animal_search" model="ir.ui.view">
+        <field name="name">zoologico.animal.search</field>
+        <field name="model">zoologico.animal</field>
+        <field name="arch" type="xml">
+            <search string="Buscar Animal">
+
+                <field name="nombre"/>
+                <field name="especie"/>
+                
+
+                <filter name="macho" string="Macho" domain="[('genero', '=', 'macho')]"/>
+                <filter name="hembra" string="Hembra" domain="[('genero', '=', 'hembra')]"/>
+
+                <group expand="0" string="Agrupar por: ">
+                    <filter name="group_especie" string="Especie" context="{'group_by':'especie'}"/>
+                </group>
+            </search>
+        </field>
+
+    </record>
+
     <!-- Define la vista que se usara para el modelo -->
     <record id="action_animal" model="ir.actions.act_window">
         <field name="name">Animal</field>
         <field name="res_model">zoologico.animal</field>
         <field name="view_mode">tree,form</field>
+        <field name="search_view_id" ref="zoologico.view_animal_search"/>
     </record>
 
     <!-- El menu del zoologico -->
