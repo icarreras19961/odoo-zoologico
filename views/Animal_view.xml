@@ -46,7 +46,6 @@
 
                 <field name="nombre"/>
                 <field name="especie"/>
-                
 
                 <filter name="macho" string="Macho" domain="[('genero', '=', 'macho')]"/>
                 <filter name="hembra" string="Hembra" domain="[('genero', '=', 'hembra')]"/>
