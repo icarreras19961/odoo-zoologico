@@ -1,0 +1,42 @@
+<odoo>
+    <data>
+        <!-- trabajadores -->
+        <record id="trabajador_juan" model="zoologico.trabajador">
+            <field name="nombre">Juan Paco Fiestas</field>
+            <field name="dni">54645656C</field>
+            <field name="estado">b</field>
+        </record>
+        <record id="trabajador_ivan" model="zoologico.trabajador">
+            <field name="nombre">Ivan Carreras Perez</field>
+            <field name="dni">348742191J</field>
+            <field name="estado">t</field>
+        </record>
+        <record id="trabajador_alvaro" model="zoologico.trabajador">
+            <field name="nombre">Alvaro Alonso Quispe Palacio</field>
+            <field name="dni">no tiene papeles es de peru</field>
+            <field name="estado">v</field>
+        </record>
+        <record id="trabajador_roberto" model="zoologico.trabajador">
+            <field name="nombre">Roberto Musso</field>
+            <field name="dni">213213141A</field>
+            <field name="estado">v</field>
+        </record>
+
+        <!-- recintos -->
+        <record id="recinto_aquario" model="zoologico.recinto">
+            <field name="nombre">Aquario</field>
+            <field name="trabajador"
+                eval="[(6, 0, [ ref('trabajador_juan'), ref('trabajador_ivan')])]" />
+        </record>
+        <record id="recinto_polar" model="zoologico.recinto">
+            <field name="nombre">Zona Polar</field>
+            <field name="trabajador"
+                eval="[(6, 0, [ ref('trabajador_alvaro'), ref('trabajador_roberto')])]" />
+        </record>
+        <record id="recinto_sabana" model="zoologico.recinto">
+            <field name="nombre">Zona de Sabana</field>
+            <field name="trabajador"
+                eval="[(6, 0, [ ref('trabajador_juan'), ref('trabajador_alvaro')])]" />
+        </record>
+    </data>
+</odoo>
