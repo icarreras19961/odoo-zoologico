@@ -1,0 +1,16 @@
+<odoo>
+    <data>
+        <record id="view_libro_graph" model="ir.ui.view">
+           <field name="name">zoologico.animal.graph</field>
+            <field name="model">zoologico.animal</field>
+            <field name="arch" type="xml"> 
+                <graph string="Cantidad de animales por especie" type="pie">
+                    <field name="nombre"/>
+                    <field name="genero"/>
+                    <field name="informacion_extra"/>
+                    <field name="fecha_nacimiento"/>
+                    <field name="especie"/>
+                </graph>
+        </record>
+    </data>
+</odoo>

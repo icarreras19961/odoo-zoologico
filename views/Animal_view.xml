@@ -38,6 +38,7 @@
         </field>
     </record>
 
+    <!-- El search -->
     <record id="zoologico.view_animal_search" model="ir.ui.view">
         <field name="name">zoologico.animal.search</field>
         <field name="model">zoologico.animal</field>
@@ -46,6 +47,7 @@
 
                 <field name="nombre"/>
                 <field name="especie"/>
+               
 
                 <filter name="macho" string="Macho" domain="[('genero', '=', 'macho')]"/>
                 <filter name="hembra" string="Hembra" domain="[('genero', '=', 'hembra')]"/>
@@ -58,12 +60,41 @@
 
     </record>
 
+    <!-- Kanban -->
+    <record id="zoologico.view_animal_kanban" model="ir.ui.view">
+        <field name="name">zoologico.animal.kanban</field>
+        <field name="model">zoologico.animal</field>
+        <field name="arch" type="xml">
+            <kanban>
+                <field name="nombre"/>
+                <field name="genero"/>
+                <field name="informacion_extra"/>
+                <field name="fecha_nacimiento"/>
+                <field name="especie"/>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div class="o_kanban_record">
+                            <div class="o_kanban_details">
+                                <strong><t t-esc="record.nombre.value"/></strong>
+                                <p>Nombre: <t t-esc="record.nombre.value"/></p>
+                                <p>Genero: <t t-esc="record.genero.value"/></p>
+                                <p>Info: <t t-esc="record.informacion_extra.value"/></p>
+                                <p>Cumple: <t t-esc="record.fecha_nacimiento.value"/></p>
+                                <p>Especie: <t t-esc="record.especie.value"/></p>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+
+            </kanban>
+        </field>
+    </record>
+
     <!-- Define la vista que se usara para el modelo -->
     <record id="action_animal" model="ir.actions.act_window">
         <field name="name">Animal</field>
         <field name="res_model">zoologico.animal</field>
-        <field name="view_mode">tree,form</field>
-        <field name="search_view_id" ref="zoologico.view_animal_search"/>
+        <field name="view_mode">kanban,tree,form</field>
     </record>
 
     <!-- El menu del zoologico -->

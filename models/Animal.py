@@ -9,3 +9,4 @@ class Animal(models.Model):
     informacion_extra = fields.Text(string="informacion")
     fecha_nacimiento = fields.Date(string="fecha nacimiento", required=True)
     especie = fields.Many2one(string="especie",requierd=True)
+    imagen = fields.Image(string="Imagen")

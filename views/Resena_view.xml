@@ -16,6 +16,23 @@
         </field>
     </record>
 
+    <!-- El form -->
+    <record id="zoologico.view_resena_form" model="ir.ui.view">
+        <field name="name">zoologico.resena.form</field>
+        <field name="model">zoologico.resena</field>
+        <field name="arch" type="xml">
+            <form string="Gestion de resena">
+                <sheet>
+                    <group>
+                        <field name="correo" string="Titulo"/>
+                        <field name="recinto"/>
+                        <field name="comentario"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
      <!-- Define la vista que se usara para el modelo -->
     <record id="action_resena" model="ir.actions.act_window">
         <field name="name">Resena</field>

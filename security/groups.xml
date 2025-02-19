@@ -16,4 +16,11 @@
         <field name="name">Trabajador del zoologico</field>
         <field name="category_id" ref="zoologico.module_category_zoologico"/>
     </record>
+
+    <!-- Grupo de Visitantes -->
+    <record id="group_zoologico_guest" model="res.groups">
+        <field name="name">Visitante del zoologico</field>
+        <field name="category_id" ref="zoologico.module_category_zoologico"/>
+    </record>
+
 </odoo>

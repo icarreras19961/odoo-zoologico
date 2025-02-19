@@ -12,11 +12,29 @@
         </field>
     </record>
 
+
+    <!-- El form -->
+    <record id="zoologico.view_recinto_form" model="ir.ui.view">
+        <field name="name">zoologico.recinto.form</field>
+        <field name="model">zoologico.recinto</field>
+        <field name="arch" type="xml">
+            <form string="Gestion de recinto">
+                <sheet>
+                    <group>
+                        <field name="nombre" string="Titulo"/>
+                        <field name="informacion_extra"/>
+                        <field name="trabajador"/>
+                        <field name="especies"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
     <!-- Define la vista que se usara para el modelo -->
     <record id="action_recinto" model="ir.actions.act_window">
         <field name="name">Recinto</field>
         <field name="res_model">zoologico.recinto</field>
-        <field name="view_mode">tree</field>
+        <field name="view_mode">tree,form</field>
     </record>
 
     <!-- El menu del zoologico -->
