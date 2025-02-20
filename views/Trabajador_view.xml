@@ -18,7 +18,7 @@
     <record id="action_trabajador" model="ir.actions.act_window">
         <field name="name">Trabajador</field>
         <field name="res_model">zoologico.trabajador</field>
-        <field name="view_mode">tree</field>
+        <field name="view_mode">tree,form</field>
     </record>
 
     <!-- El menu del zoologico -->

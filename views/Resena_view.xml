@@ -39,7 +39,7 @@
     <record id="action_resena" model="ir.actions.act_window">
         <field name="name">Resena</field>
         <field name="res_model">zoologico.resena</field>
-        <field name="view_mode">tree</field>
+        <field name="view_mode">tree,form</field>
     </record>
 
     <!-- El menu del zoologico -->

@@ -14,3 +14,5 @@ group_zoologico_worker_resena,trabajador del zoologico,model_zoologico_resena,zo
 group_zoologico_guest_resena,Visitante del zoologico,model_zoologico_resena,zoologico.group_zoologico_guest,1,0,0,0
 group_zoologico_manager_inventario,jefe del zoologico,model_zoologico_inventario,zoologico.group_zoologico_manager,1,1,1,1
 group_zoologico_worker_inventario,trabajador del zoologico,model_zoologico_inventario,zoologico.group_zoologico_worker,1,1,0,0
+group_zoologico_manager_evento,jefe del zoologico,model_zoologico_evento,zoologico.group_zoologico_manager,1,1,1,1
+group_zoologico_worker_evento,trabajador del zoologico,model_zoologico_evento,zoologico.group_zoologico_worker,1,1,0,0
