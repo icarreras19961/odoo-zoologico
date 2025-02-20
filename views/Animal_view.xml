@@ -94,15 +94,27 @@
         </field>
     </record>
 
+    <!-- La vista graph -->
+    <record id="view_animal_graph" model="ir.ui.view">
+        <field name="name">zoologico.animal.graph</field>
+        <field name="model">zoologico.animal</field>
+        <field name="arch" type="xml"> 
+            <graph string="Cantidad de animales por especie" type="pie">
+                <field name="genero" type="row"/>
+                <field name="id" type="measure"/>
+            </graph>
+        </field>
+    </record>
+
     <!-- Define la vista que se usara para el modelo -->
     <record id="action_animal" model="ir.actions.act_window">
         <field name="name">Animal</field>
         <field name="res_model">zoologico.animal</field>
-        <field name="view_mode">kanban,tree,form</field>
+        <field name="view_mode">kanban,tree,form,graph</field>
     </record>
 
     <!-- El menu del zoologico -->
-    <menuitem id="menu_zoologico" name="Zoologico"/>
+    <menuitem id="menu_zoologico" name="zoologico"/>
 
     <!-- Submenu -->
     <menuitem id="menu_animal" name="Animal" parent="menu_zoologico" action="action_animal"/>

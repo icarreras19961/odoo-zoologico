@@ -1,0 +1,57 @@
+<odoo>
+    <record id="zoologico.view_evento_tree" model="ir.ui.view">
+        <field name="name">evento.tree</field>
+        <field name="model">zoologico.evento</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="nombre"/>
+                <field name="fecha_inicio"/>
+                <field name="fecha_final"/>
+                <field name="recinto"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- El form -->
+    <record id="zoologico.view_evento_form" model="ir.ui.view">
+        <field name="name">zoologico.evento.form</field>
+        <field name="model">zoologico.evento</field>
+        <field name="arch" type="xml">
+            <form string="Gestion de Eventos">
+                <sheet>
+                    <group>
+                        <field name="nombre" string="Titulo"/>
+                        <field name="fecha_inicio"/>
+                        <field name="fecha_final"/>
+                        <field name="recinto"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- El calendar -->
+    <record id="zoologico.view_evento_calendat" model="ir.ui.view">
+        <field name="name">zoologico.evento.calendar</field>
+        <field name="model">zoologico.evento</field>
+        <field name="arch" type="xml">
+            <calendar string="Evento" date_start="fecha_inicio" date_stop="fecha_final" >
+                <field name="nombre"/>
+                <field name="recinto"/>
+            </calendar>
+        </field>
+    </record>
+
+    <!-- Define la vista que se usara para el modelo -->
+    <record id="action_evento" model="ir.actions.act_window">
+        <field name="name">evento</field>
+        <field name="res_model">zoologico.evento</field>
+        <field name="view_mode">tree,form,calendar</field>
+    </record>
+
+        <!-- El menu del zoologico -->
+    <menuitem id="menu_zoologico" name="zoologico"/>
+
+    <!-- Submenu -->
+    <menuitem id="menu_evneto" name="Eventos" parent="menu_zoologico" action="action_evento"/>
+</odoo>

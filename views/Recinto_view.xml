@@ -30,11 +30,25 @@
             </form>
         </field>
     </record>
+
+     <!-- La vista graph -->
+    <record id="view_recinto_graph" model="ir.ui.view">
+        <field name="name">zoologico.recinto.graph</field>
+        <field name="model">zoologico.recinto</field>
+        <field name="arch" type="xml"> 
+            <graph string="Cantidad de animales por recinto" type="pie">
+                <field name="nombre" type="row"/>
+                <field name="id" type="measure"/>
+            </graph>
+        </field>
+    </record>
+
+
     <!-- Define la vista que se usara para el modelo -->
     <record id="action_recinto" model="ir.actions.act_window">
         <field name="name">Recinto</field>
         <field name="res_model">zoologico.recinto</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">tree,form,graph</field>
     </record>
 
     <!-- El menu del zoologico -->

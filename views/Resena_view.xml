@@ -12,7 +12,7 @@
                 <field name="correo"/>
                 <field name="recinto"/>
                 <field name="comentario"/>
-                <field name="fecha"/>
+                        <field name="fecha"/>
             </tree>
         </field>
     </record>
@@ -27,9 +27,8 @@
                     <group>
                         <field name="correo" string="Titulo"/>
                         <field name="recinto"/>
-                        <field name="comentario"/>
                         <field name="fecha"/>
-
+                        <field name="comentario"/>
                     </group>
                 </sheet>
             </form>
