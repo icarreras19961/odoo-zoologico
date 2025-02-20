@@ -5,7 +5,7 @@
             <field name="nombre">Juan Paco Fiestas</field>
             <field name="dni">54645656C</field>
             <field name="estado">b</field>
-        </record>
+        </record> 
         <record id="trabajador_ivan" model="zoologico.trabajador">
             <field name="nombre">Ivan Carreras Perez</field>
             <field name="dni">348742191J</field>
@@ -38,5 +38,48 @@
             <field name="trabajador"
                 eval="[(6, 0, [ ref('trabajador_juan'), ref('trabajador_alvaro')])]" />
         </record>
-    </data>
-</odoo>
+
+        <!-- especies -->
+          <record id="especie_leopardo" model="zoologico.especie">
+            <field name="nombre">Leopardo</field>
+            <field name="clase">mamifero</field>
+            <field name="recinto" ref="recinto_sabana"/>
+        </record>
+          <record id="especie_pinguino" model="zoologico.especie">
+            <field name="nombre">Pinguino</field>
+            <field name="clase">aves</field>
+            <field name="recinto" ref="recinto_polar"/>
+        </record>
+          <record id="especie_pez_payaso" model="zoologico.especie">
+            <field name="nombre">Pez Payaso</field>
+            <field name="clase">peces</field>
+            <field name="recinto" ref="recinto_aquario"/>
+        </record>
+
+        <!-- animales -->
+        <record id="animal_pinguino" model="zoologico.animal">
+            <field name="nombre">Pancracio el pinguino</field>
+            <field name="genero">macho</field>
+            <field name="especie" ref="especie_pinguino"/>
+            <field name="fecha_nacimiento" >2020-5-12</field>            
+            
+        </record>
+
+         <record id="animal_leopardo" model="zoologico.animal">
+            <field name="nombre">El leopardo de los chetos</field>
+            <field name="genero">macho</field>
+            <field name="especie" ref="especie_leopardo"/>
+            <field name="fecha_nacimiento" >2020-5-12</field>            
+        </record>
+
+         <record id="animal_pez_payaso" model="zoologico.animal">
+            <field name="nombre">Nemo</field>
+            <field name="genero">macho</field>
+            <field name="especie" ref="especie_pez_payaso"/>
+            <field name="fecha_nacimiento" >2020-5-12</field>            
+            
+        </record>
+        
+
+    </data> 
+</odoo> 

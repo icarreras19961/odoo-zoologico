@@ -8,5 +8,5 @@ class Animal(models.Model):
     genero = fields.Selection([('macho','Macho'),('hembra','Hembra')],string="Genero",default='macho')
     informacion_extra = fields.Text(string="Informacion")
     fecha_nacimiento = fields.Date(string="Fecha de nacimiento", required=True)
-    especie = fields.Many2one(string="Especie",requierd=True)
+    especie = fields.Many2one("zoologico.especie",string="Especie",requierd=True)
     imagen = fields.Image(string="Imagen")
