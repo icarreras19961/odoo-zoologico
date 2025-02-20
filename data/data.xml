@@ -81,5 +81,57 @@
         </record>
         
 
+    <!-- reseñas -->
+        <record id="reseña_1" model="zoologico.resena">
+            <field name="correo">megustanlospezes@gmail.com</field>
+            <field name="recinto" ref="recinto_aquario"/>
+            <field name="comentario" >Solo hay un pez</field>            
+            <field name="fecha" >2025-2-12</field>            
+        </record>
+        
+        <record id="reseña_2" model="zoologico.resena">
+            <field name="correo">megustanlosleopardos@gmail.com</field>
+            <field name="recinto" ref="recinto_sabana"/>
+            <field name="comentario" >Solo hay un leopardo</field>            
+            <field name="fecha" >2025-2-12</field>            
+        </record>
+        <record id="reseña_3" model="zoologico.resena">
+            <field name="correo">megustanlospinguinos@gmail.com</field>
+            <field name="recinto" ref="recinto_polar"/>
+            <field name="comentario" >Solo hay un pinguino</field>            
+            <field name="fecha" >2025-2-12</field>            
+        </record>
+    <!-- inventario -->
+         <record id="item_1" model="zoologico.inventario">
+            <field name="item">Escobas</field>
+            <field name="stock" >123</field>            
+        </record>
+          <record id="item_2" model="zoologico.inventario">
+            <field name="item">Comida para leopardos (en kilos)</field>
+            <field name="stock" >34</field>            
+        </record>
+          <record id="item_3" model="zoologico.inventario">
+            <field name="item">Papel de fotocopia (paquetes de 500 hojas)</field>
+            <field name="stock" >7</field>            
+        </record>
+    <!-- evento -->
+        <record id="evento_1" model="zoologico.evento">
+                    <field name="nombre">Exhibicion de peces</field>
+            <field name="fecha_inicio" >2025-2-12</field>            
+            <field name="fecha_final" >2025-2-22</field>            
+            <field name="recinto" ref="recinto_aquario"/>
+        </record>
+        <record id="evento_2" model="zoologico.evento">
+                    <field name="nombre">Exhibicion de peces 2</field>
+            <field name="fecha_inicio" >2025-5-12</field>            
+            <field name="fecha_final" >2025-8-12</field>            
+            <field name="recinto" ref="recinto_aquario"/>
+        </record>    
+        <record id="evento_3" model="zoologico.evento">
+                    <field name="nombre">Show de delfines</field>
+            <field name="fecha_inicio" >2025-3-10</field>            
+            <field name="fecha_final" >2025-4-21</field>            
+            <field name="recinto" ref="recinto_aquario"/>
+        </record>
     </data> 
 </odoo> 
