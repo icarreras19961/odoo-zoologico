@@ -35,6 +35,7 @@
         'views/Recinto_view.xml',
         'views/Especie_view.xml',
         'views/Animal_view.xml',
+        'views/Evento_view.xml',
         'views/views.xml',
         'views/templates.xml',
         'data/data.xml'

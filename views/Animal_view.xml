@@ -17,6 +17,8 @@
                 <field name="fecha_nacimiento"/>
                 <field name="especie"/>
                 <field name="imagen"/>
+                <field name="edad"/>
+
             </tree>
         </field>
     </record>

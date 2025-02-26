@@ -8,6 +8,8 @@
                 <field name="fecha_inicio"/>
                 <field name="fecha_final"/>
                 <field name="recinto"/>
+                <field name="dias_evento"/>
+
             </tree>
         </field>
     </record>
@@ -49,9 +51,11 @@
         <field name="view_mode">tree,form,calendar</field>
     </record>
 
+        
+        
         <!-- El menu del zoologico -->
     <menuitem id="menu_zoologico" name="zoologico"/>
 
     <!-- Submenu -->
-    <menuitem id="menu_evneto" name="Eventos" parent="menu_zoologico" action="action_evento"/>
+    <menuitem id="menu_evento" name="Eventos" parent="menu_zoologico" action="action_evento"/>
 </odoo>
