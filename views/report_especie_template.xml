@@ -1,0 +1,41 @@
+<odoo>
+    <template id="report_especie_template">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="especie">
+                <div class="page">
+                    <h2 style="text-align:center;">Reporte de Especie</h2>
+                    <table style="width: 100%; border: 1px solid black; border-collapse: collapse;">
+                        <thead>
+                            <tr style="backgroud-color: #f2f2f2;">
+                                <th style="border:1px solid black; padding: 8px;">nombre</th>
+                                <th style="border:1px solid black; padding: 8px;">informacion_extra</th>
+                                <th style="border:1px solid black; padding: 8px;">clase</th>
+                                <th style="border:1px solid black; padding: 8px;">animales_asociados</th>
+                                <th style="border:1px solid black; padding: 8px;">recinto</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="borde: 1px solid black; padding: 8px;">
+                                    <t t-esc="especie.nombre"/>
+                                </td>
+                                <td style="borde: 1px solid black; padding: 8px;">
+                                    <t t-esc="especie.informacion_extra"/>
+                                </td>
+                                <td style="borde: 1px solid black; padding: 8px;">
+                                    <t t-esc="especie.clase"/>
+                                </td>
+                                <td style="borde: 1px solid black; padding: 8px;">
+                                    <t t-esc="especie.animales_asociados"/>
+                                </td>
+                                <td style="borde: 1px solid black; padding: 8px;">
+                                    <t t-esc="especie.recinto"/>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </t>
+        </t>
+    </template>              
+</odoo>

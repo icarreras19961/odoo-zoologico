@@ -7,6 +7,7 @@
         <field name="model">zoologico.animal</field>
         <!-- Lo que mostrara la vista -->
         <field name="arch" type="xml">
+            
             <!-- El tipo de vista -->
             <tree>
                 <!-- Las fields del modelo -->
@@ -26,6 +27,9 @@
         <field name="model">zoologico.animal</field>
         <field name="arch" type="xml">
             <form string="Gestion de animales">
+                <header>
+                    <button name="%(report_animal)d" type="action" string="Imprimir Informe" class="btn-primary"/>
+                </header>
                 <sheet>
                     <group>
                         <field name="nombre" string="Titulo"/>

@@ -1,0 +1,45 @@
+<odoo>
+    <template id="report_animal_template">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="animal">
+                <div class="page">
+                    <h2 style="text-align:center;">Reporte de Animal</h2>
+                    <table style="width: 100%; border: 1px solid black; border-collapse: collapse;">
+                        <thead>
+                            <tr style="backgroud-color: #f2f2f2;">
+                                <th style="border:1px solid black; padding: 8px;">nombre</th>
+                                <th style="border:1px solid black; padding: 8px;">genero</th>
+                                <th style="border:1px solid black; padding: 8px;">informacion_extra</th>
+                                <th style="border:1px solid black; padding: 8px;">fecha_nacimiento</th>
+                                <th style="border:1px solid black; padding: 8px;">especie</th>
+                                <th style="border:1px solid black; padding: 8px;">imagen</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="borde: 1px solid black; padding: 8px;">
+                                    <t t-esc="animal.nombre"/>
+                                </td>
+                                <td style="borde: 1px solid black; padding: 8px;">
+                                    <t t-esc="animal.genero"/>
+                                </td>
+                                <td style="borde: 1px solid black; padding: 8px;">
+                                    <t t-esc="animal.informacion_extra"/>
+                                </td>
+                                <td style="borde: 1px solid black; padding: 8px;">
+                                    <t t-esc="animal.fecha_nacimiento"/>
+                                </td>
+                                <td style="borde: 1px solid black; padding: 8px;">
+                                    <t t-esc="animal.especie"/>
+                                </td>
+                                <td style="borde: 1px solid black; padding: 8px;">
+                                    <t t-esc="animal.imagen"/>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </t>
+        </t>
+    </template>              
+</odoo>

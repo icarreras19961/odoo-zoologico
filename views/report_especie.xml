@@ -1,0 +1,10 @@
+<odoo>
+    <report
+        id="report_especie"
+        model="zoologico.especie"
+        string="Informacion de especies"
+        report_type="qweb-pdf"
+        file="zoologico.report_especie_template"
+        name="zoologico.report_especie_template"
+        />
+</odoo>

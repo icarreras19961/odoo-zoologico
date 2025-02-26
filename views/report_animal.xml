@@ -1,0 +1,10 @@
+<odoo>
+    <report
+        id="report_animal"
+        model="zoologico.animal"
+        string="Informacion de animal"
+        report_type="qweb-pdf"
+        file="zoologico.report_animal_template"
+        name="zoologico.report_animal_template"
+        />
+</odoo>

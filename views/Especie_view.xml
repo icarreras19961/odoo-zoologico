@@ -10,6 +10,7 @@
                 <field name="clase"/>
                 <field name="animales_asociados"/>
                 <field name="recinto"/>
+
             </tree>
         </field>
     </record>
@@ -19,6 +20,9 @@
         <field name="model">zoologico.especie</field>
         <field name="arch" type="xml">
             <form string="Gestion de Especies">
+                <header>
+                    <button name="%(report_especie)d" type="action" string="Imprimir Informe" class="btn-primary"/>
+                </header>
                 <sheet>
                     <group>
                         <field name="nombre" string="Titulo"/>

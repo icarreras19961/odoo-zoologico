@@ -23,6 +23,10 @@
 
     # always loaded
     'data': [
+        'views/report_especie_template.xml',
+        'views/report_especie.xml',
+        'views/report_animal_template.xml',
+        'views/report_animal.xml',
         'security/groups.xml',
         'security/ir.model.access.csv',
         'views/inventario_view.xml',
